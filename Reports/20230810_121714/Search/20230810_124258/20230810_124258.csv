@@ -1,0 +1,54 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Search,Chrome 107.0.0.0,,,2023-08-10 12:43:03,2023-08-10 12:51:25,8m - 22.070s,FAILED
+,,,,,,,
+Test Cases/Search/TS_SMOKE_SUITE_059,Chrome 107.0.0.0,To verify the default display of the products per page in the search result page,search,2023-08-10 12:43:03,2023-08-10 12:46:44,3m - 40.182s,PASSED
+"openBrowser("""")",Chrome 107.0.0.0,,,2023-08-10 12:43:04,2023-08-10 12:43:08,3.838s,PASSED
+navigateToUrl(url),Chrome 107.0.0.0,,,2023-08-10 12:43:08,2023-08-10 12:44:15,1m - 7.263s,PASSED
+"callTestCase(findTestCase(""CommonMethods/SearchForAProduct_search""), [""searchTerm"":""mac""], STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:44:15,2023-08-10 12:44:23,7.701s,PASSED
+"verifyElementPresent(findTestObject(""PDPPage/product_56_PDP""), 0)",Chrome 107.0.0.0,"last product at a page  not 45
+
+",,2023-08-10 12:44:23,2023-08-10 12:46:11,1m - 48.584s,PASSED
+"verifyElementNotPresent(findTestObject(""PDPPage/product_57_PDP""), 0)",Chrome 107.0.0.0,,,2023-08-10 12:46:11,2023-08-10 12:46:43,31.285s,PASSED
+closeBrowser(),Chrome 107.0.0.0,,,2023-08-10 12:46:43,2023-08-10 12:46:44,0.858s,PASSED
+,,,,,,,
+Test Cases/Search/TS_SMOKE_SUITE_060,Chrome 107.0.0.0,To verify the functionality of facet selection in search result page.,,2023-08-10 12:46:44,2023-08-10 12:49:22,2m - 38.834s,FAILED
+"openBrowser("""")",Chrome 107.0.0.0,,,2023-08-10 12:46:44,2023-08-10 12:46:46,1.596s,PASSED
+navigateToUrl(url),Chrome 107.0.0.0,,,2023-08-10 12:46:46,2023-08-10 12:47:29,43.282s,PASSED
+"callTestCase(findTestCase(""CommonMethods/SearchForAProduct_search""), [""searchTerm"":""mac""], STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:47:29,2023-08-10 12:47:36,7.376s,PASSED
+"click(findTestObject(""HomePage/Logo_hp""))",Chrome 107.0.0.0,,,2023-08-10 12:47:36,2023-08-10 12:47:37,0.794s,PASSED
+"callTestCase(findTestCase(""CommonMethods/SearchForAProduct_search""), [""searchTerm"":""mac""], STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:47:37,2023-08-10 12:49:09,1m - 31.547s,PASSED
+"verifyElementPresent(findTestObject(""PLPPage/facetes/Facet_Seller_liverpool_PLP""), 0)",Chrome 107.0.0.0,,,2023-08-10 12:49:09,2023-08-10 12:49:09,0.428s,PASSED
+"a = getText(findTestObject(""PLPPage/facetes/Facet_Seller_liverpool_PLP""), STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:49:09,2023-08-10 12:49:10,0.394s,PASSED
+"click(findTestObject(""PLPPage/facetes/Facet_Seller_liverpool_PLP""), STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:49:10,2023-08-10 12:49:10,0.723s,PASSED
+"b = getText(findTestObject(""PLPPage/facetes/selectedfacet1_PLP""))",Chrome 107.0.0.0,,,2023-08-10 12:49:10,2023-08-10 12:49:21,10.973s,PASSED
+if (a == b),Chrome 107.0.0.0,,,2023-08-10 12:49:21,2023-08-10 12:49:21,0.000s,PASSED
+else,Chrome 107.0.0.0,,,2023-08-10 12:49:21,2023-08-10 12:49:21,0.015s,FAILED
+closeBrowser(),Chrome 107.0.0.0,,,2023-08-10 12:49:21,2023-08-10 12:49:22,1.159s,PASSED
+,,,,,,,
+Test Cases/Search/TS_SMOKE_SUITE_061,Chrome 107.0.0.0,To verify the functionality of pagination in search result page.,search,2023-08-10 12:49:22,2023-08-10 12:51:25,2m - 2.587s,FAILED
+"openBrowser("""")",Chrome 107.0.0.0,,,2023-08-10 12:49:23,2023-08-10 12:49:25,1.720s,PASSED
+navigateToUrl(url),Chrome 107.0.0.0,,,2023-08-10 12:49:25,2023-08-10 12:50:14,49.476s,PASSED
+"callTestCase(findTestCase(""CommonMethods/SearchForAProduct_search""), [""searchTerm"":""mac""], STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:50:14,2023-08-10 12:50:22,8.029s,PASSED
+"click(findTestObject(""HomePage/Logo_hp""))",Chrome 107.0.0.0,,,2023-08-10 12:50:22,2023-08-10 12:50:23,1.129s,PASSED
+"callTestCase(findTestCase(""CommonMethods/SearchForAProduct_search""), [""searchTerm"":""mac""], STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:50:23,2023-08-10 12:50:31,7.260s,PASSED
+delay(5),Chrome 107.0.0.0,,,2023-08-10 12:50:31,2023-08-10 12:50:36,5.016s,PASSED
+a1 = getUrl(),Chrome 107.0.0.0,,,2023-08-10 12:50:36,2023-08-10 12:50:36,0.052s,PASSED
+out.println(a1),Chrome 107.0.0.0,,,2023-08-10 12:50:36,2023-08-10 12:50:36,0.027s,PASSED
+"a = a1.contains(""page-2"")",Chrome 107.0.0.0,,,2023-08-10 12:50:36,2023-08-10 12:50:36,0.001s,PASSED
+"scrollToElement(findTestObject(""PLPPage/pagenation_1_PLP""), 0)",Chrome 107.0.0.0,,,2023-08-10 12:50:36,2023-08-10 12:50:37,1.591s,PASSED
+delay(10),Chrome 107.0.0.0,,,2023-08-10 12:50:37,2023-08-10 12:50:47,10.013s,PASSED
+"click(findTestObject(""PLPPage/pagenation_2_PLP""), STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:50:47,2023-08-10 12:50:48,0.640s,PASSED
+delay(10),Chrome 107.0.0.0,,,2023-08-10 12:50:48,2023-08-10 12:50:58,10.013s,PASSED
+out.println(a),Chrome 107.0.0.0,,,2023-08-10 12:50:58,2023-08-10 12:50:58,0.003s,PASSED
+delay(5),Chrome 107.0.0.0,,,2023-08-10 12:50:58,2023-08-10 12:51:03,5.016s,PASSED
+"scrollToElement(findTestObject(""PLPPage/pagenation_1_PLP""), 0)",Chrome 107.0.0.0,,,2023-08-10 12:51:03,2023-08-10 12:51:04,0.524s,PASSED
+delay(10),Chrome 107.0.0.0,,,2023-08-10 12:51:04,2023-08-10 12:51:14,10.010s,PASSED
+"click(findTestObject(""PLPPage/pagenation_1_PLP""), STOP_ON_FAILURE)",Chrome 107.0.0.0,,,2023-08-10 12:51:14,2023-08-10 12:51:14,0.521s,PASSED
+delay(10),Chrome 107.0.0.0,,,2023-08-10 12:51:14,2023-08-10 12:51:24,10.019s,PASSED
+if (a == true),Chrome 107.0.0.0,,,2023-08-10 12:51:24,2023-08-10 12:51:24,0.001s,PASSED
+else,Chrome 107.0.0.0,,,2023-08-10 12:51:24,2023-08-10 12:51:24,0.002s,FAILED
+b1 = getUrl(),Chrome 107.0.0.0,,,2023-08-10 12:51:24,2023-08-10 12:51:24,0.020s,PASSED
+"b = b1.contains(""page-1"")",Chrome 107.0.0.0,,,2023-08-10 12:51:24,2023-08-10 12:51:24,0.001s,PASSED
+out.println(b1),Chrome 107.0.0.0,,,2023-08-10 12:51:24,2023-08-10 12:51:24,0.002s,PASSED
+if (b == true),Chrome 107.0.0.0,,,2023-08-10 12:51:24,2023-08-10 12:51:24,0.004s,PASSED
+closeBrowser(),Chrome 107.0.0.0,,,2023-08-10 12:51:24,2023-08-10 12:51:25,0.920s,PASSED
